@@ -39,6 +39,14 @@ cd caffe_convert_onnx/cmd
 		--out ../examples/inference/models/onnx/mobilenet_v1.onnx
 ```
 
+If you are in China, the clone project is slow and often interrupted, you can consider using the download mirror gitclone.com, refer to the command:
+
+```bash
+git clone https://gitclone.com/github.com/xncaffe/caffe_convert_onnx.git
+```
+
+Or get the conversion executable tool convert_main from the URL [https://download.csdn.net/download/xunan003/87659000?spm=1001.2014.3001.5503](https://download.csdn.net/download/xunan003/87659000?spm=1001.2014.3001.5503 "https://download.csdn.net/download/xunan003/87659000?spm=1001.2014.3001.5503")
+
 You can also use -h for help
 
 ```bash
@@ -64,12 +72,13 @@ If you need to use the forward reasoning program we provide to infer the caffe m
 
 1. First you need to install a working caffe framework and configure its python interface.
 2. The python version >= 3.7, we used python 3.7.13.
-3. Install dependencies according to the provided requirements.txt.
+3. Download the example caffemodel from address [https://download.csdn.net/download/xunan003/87658946?spm=1001.2014.3001.5503](https://download.csdn.net/download/xunan003/87658946?spm=1001.2014.3001.5503 "https://download.csdn.net/download/xunan003/87658946?spm=1001.2014.3001.5503"), And decompress examples.zip and place it in the *caffe_convert_onnx* project directory.
+4. Install dependencies according to the provided requirements.txt.
 
    ```bash
    pip install -r requirements.txt
    ```
-4. Follow the instructions below to get help on using the inference caffe and onnx models
+5. Follow the instructions below to get help on using the inference caffe and onnx models
 
    ```
    python caffe_inference.py -h
@@ -125,7 +134,7 @@ If you need to use the forward reasoning program we provide to infer the caffe m
      --AllTensor           dump all node output tensor!
 
    ```
-5. We explain the parameters of caffe and onnx reasoning as follows.
+6. We explain the parameters of caffe and onnx reasoning as follows.
 
    #### *caffe*
 
@@ -196,6 +205,6 @@ If you need to use the forward reasoning program we provide to infer the caffe m
    ### Onnx single input network image input ###
    ```
 
-    For other tests, please operate similarly.
+   For other tests, please operate similarly.
 
 Note that multi-input networks only support the case where all inputs are the same set of pre-processing parameters.
