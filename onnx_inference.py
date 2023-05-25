@@ -197,7 +197,7 @@ def preprocess(imdir,imtype, indim, mean_values, scale_values, input_type):
         im = im.astype(np.float32)
         im = im - mean_values[0] if input_type == "Gray" else im - np.array(mean_values, dtype=np.float32)
         im = im * scale_values[0] if input_type == "Gray" else im * np.array(scale_values, dtype=np.float32)
-        im = im if input_type == "Gray" else im.transpose(2, 1, 0)
+        im = im if input_type == "Gray" else im.transpose(2, 0, 1)
         im = np.reshape(im, tuple(indim))
     else:
         raise AssertionError("Only support .txt, .bin, .jpg, .png, .jpeg and .bmp data format to net!")
