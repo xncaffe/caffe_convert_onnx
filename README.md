@@ -10,7 +10,7 @@
 
 | Input                | LRN          | Deconvolution  |
 | -------------------- | ------------ | -------------- |
-| DunnyData            | InnerProduct | Interp         |
+| DummyData            | InnerProduct | Interp         |
 | VideoData            | Reshape      | Split          |
 | Convolution          | Transpose    | Slice          |
 | Convolution3D        | Gemm         | ShuffleChannel |
